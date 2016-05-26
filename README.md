@@ -4,7 +4,8 @@ The ArcGIS API 4.0 for JavaScript is our next-generation web technology for buil
 
 # Cover
 
-- 4x changes?
+- Intro / philosophy
+- 4x signifigant changes?
 - Cleaner stuff
 - How people can be more productive
 - migration best practices
