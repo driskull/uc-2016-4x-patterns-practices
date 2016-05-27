@@ -14,6 +14,7 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 - 4x signifigant changes?
     * FeatureLayer query vs FeatureLayerView query
     * Hit Test 
+    * Events vs watching properties
 - Cleaner stuff
 - How people can be more productive
 - migration best practices
