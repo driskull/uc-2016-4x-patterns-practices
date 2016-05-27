@@ -12,12 +12,16 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
   - gotchas
   - browser requirements
 - 4x signifigant changes?
+    * FeatureLayer query vs FeatureLayerView query
+    * Hit Test 
 - Cleaner stuff
 - How people can be more productive
 - migration best practices
 - Design changes
   - responsive
 - Developing tips
+-   *View Padding
+-   * UI Components 
 
 # Outline
 
