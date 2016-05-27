@@ -18,6 +18,7 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 - Cleaner stuff
 - How people can be more productive
 - migration best practices
+-   * Point out 3x - 4x matrix - helps figure out 'new' class names https://developers.arcgis.com/javascript/latest/guide/functionality-matrix/index.html#arcgisdynamicmapservicelayer
 - Design changes
   - responsive
 - Developing tips
