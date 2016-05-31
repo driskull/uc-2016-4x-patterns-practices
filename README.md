@@ -46,7 +46,6 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 
 - Slide 1
 - Slide 2
-- 
 
 ## Code Snippets
 
