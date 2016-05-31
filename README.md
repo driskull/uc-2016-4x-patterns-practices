@@ -58,11 +58,15 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
   - FeatureLayer (Matt)
   - Theming (Matt)
     - Sass 
-  - Portal changes  (Matt)
+  - Portal changes  (Matt) (Briefly)
+  - Basemaps (Matt)
   - Accessor (Matt)
   - watchUtils (Kelly)
   - Collections (Kelly)
   - Responsive General changes (Kelly)
+  - Layer/LayerView (Kelly)
+  - Webmap (Kelly)
+  - WebScene (Kelly) if time
   - UI Components (Kelly)
 - Best practices & tips (25 Minutes)
   - View padding  (Kelly)
