@@ -16,17 +16,6 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
     - Hit Test 
     - Events vs watching properties
     - Lots of promises. using .then() instead of waiting for ready or loaded. promiseUtils
-      ```
-      // map loaded
-      if (map.loaded) {
-        init();
-      } else {
-        on.once(map, 'load', init);
-      }
-      ```
-      ```
-      view.then(init);
-      ```
     - Portal API different - Helper services, proxy, etc have defaults
     - main.css and themes vs just esri.css
     - esri dijits are now widgets
@@ -57,3 +46,18 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 
 - Slide 1
 - Slide 2
+- 
+
+```js
+// map loaded
+if (map.loaded) {
+  init();
+} else {
+  on.once(map, 'load', init);
+}
+```
+
+
+```js
+view.then(init);
+```
