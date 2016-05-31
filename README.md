@@ -48,6 +48,8 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 - Slide 2
 - 
 
+## Code Snippets
+
 ```js
 // map loaded
 if (map.loaded) {
@@ -55,9 +57,12 @@ if (map.loaded) {
 } else {
   on.once(map, 'load', init);
 }
+
 ```
 
 
 ```js
+
 view.then(init);
+
 ```
