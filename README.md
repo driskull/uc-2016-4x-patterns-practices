@@ -48,33 +48,33 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
   - Goals
   - Major design changes and reasons for them
   - Supported browsers (modernization)
-- Migration
+- Migration (Kelly)
   - Matrix
   - CSS link change
   - New SDK
   - Not everything there yet
 - Signifigant changes
-  - Map/View separation 
-  - FeatureLayer
-  - Theming
+  - Map/View separation (Matt)
+  - FeatureLayer (Matt)
+  - Theming (Matt)
     - Sass 
-  - Portal changes
-  - Accessor
-  - watchUtils
-  - Collections
-  - Responsive General changes
-  - UI Components
+  - Portal changes  (Matt)
+  - Accessor (Matt)
+  - watchUtils (Kelly)
+  - Collections (Kelly)
+  - Responsive General changes (Kelly)
+  - UI Components (Kelly)
 - Best practices & tips
-  - View padding 
-  - UI Components
-  - New widget stuff
-  - deprecated stuff
-  - promises
-  - Cleaner stuff (responsive, etc, detailed)
+  - View padding  (Kelly)
+  - UI Components (Kelly)
+  - New widget stuff (Matt)
+  - deprecated stuff (Matt)
+  - promises (Matt)
+  - Cleaner stuff (responsive, etc, detailed) (Matt)
     - 1 Popup: Popups/PopupTemplates
 - Closing
-  - Geonet/support/rene/github/sass
-  - Still more to do!
+  - Geonet/support/rene/github/sass (Kelly)
+  - Still more to do! (Matt)
 
 ## Code Snippets
 
