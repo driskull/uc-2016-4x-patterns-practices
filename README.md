@@ -12,9 +12,37 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
   - gotchas
   - browser requirements
 - 4x signifigant changes?
-    * FeatureLayer query vs FeatureLayerView query
-    * Hit Test 
-    * Events vs watching properties
+    - FeatureLayer query vs FeatureLayerView query
+    - Hit Test 
+    - Events vs watching properties
+    - Lots of promises. using .then() instead of waiting for ready or loaded. promiseUtils
+      ```
+      // map loaded
+      if (map.loaded) {
+        init();
+      } else {
+        on.once(map, 'load', init);
+      }
+      ```
+      ```
+      view.then(init);
+      ```
+    - Portal API different - Helper services, proxy, etc have defaults
+    - main.css and themes vs just esri.css
+    - esri dijits are now widgets
+    - dijit theme required if using dojo dijits
+    - no need for some things
+      - lang.hitch, use .bind(this)
+      - ie11+
+      - border containers, form widgets. Just use flexbox or native input elements
+      - dojo/base/array. Use native array functions.
+  - Some widgets renamed
+  - Some widgets not converted yet
+  - Watch accessor properties instead of listening to events.
+  - Accessor.get("my.property.here");
+  - watchUtils
+  - collections, layers in view
+  - SASS for theming
 - Cleaner stuff
 - How people can be more productive
 - migration best practices
