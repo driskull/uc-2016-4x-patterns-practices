@@ -57,7 +57,7 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 - Signifigant changes (25 Minutes)
   - Map/View separation (Matt)
   - FeatureLayer (Matt)
-  - Graphics Layer (?)
+  - Graphics Layer (Kelly)
   - Theming (Matt)
     - Sass 
   - Portal changes  (Matt) (Briefly)
