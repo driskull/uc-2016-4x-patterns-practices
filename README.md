@@ -13,6 +13,7 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
   - browser requirements
 - 4x signifigant changes?
     - FeatureLayer query vs FeatureLayerView query
+    - Graphics layers (multipe types set popup and symbol on feature)
     - Hit Test 
     - Events vs watching properties
     - Lots of promises. using .then() instead of waiting for ready or loaded. promiseUtils
@@ -56,6 +57,7 @@ http://arcgis.github.io/uc-2016-4x-patterns-practices/#/
 - Signifigant changes (25 Minutes)
   - Map/View separation (Matt)
   - FeatureLayer (Matt)
+  - Graphics Layer (?)
   - Theming (Matt)
     - Sass 
   - Portal changes  (Matt) (Briefly)
