@@ -8,15 +8,139 @@
 
 ---
 
-# Slide 1
+# Welcome
 
 ---
 
-# Slide 2
+## Goals
 
 ---
 
+## Major Design Changes
 
+---
+
+## Supported Browsers (modernization)
+
+---
+
+# 4.x Migration
+
+---
+
+## Matrix
+
+---
+
+## CSS Theme
+
+---
+
+## New SDK
+
+---
+
+## More to come
+
+---
+
+# 4.x Signifigant changes
+
+---
+
+## Map/View separation (Matt)
+
+---
+
+## FeatureLayer (Matt)
+
+---
+
+## Graphics Layer (Kelly)
+
+---
+
+##  Theming (Matt)
+
+- Sass 
+
+---
+
+## Portal changes  (Matt) (Briefly)
+
+---
+
+## Basemaps (Matt)
+
+---
+
+## Accessor (Matt)
+
+---
+
+## watchUtils (Kelly)
+
+---
+
+## Collections (Kelly)
+
+---
+
+## Responsive General changes (Kelly)
+
+---
+
+## Layer/LayerView (Kelly)
+
+---
+
+## Webmap (Kelly)
+
+---
+
+## WebScene (Kelly) if time
+
+---
+
+## UI Components (Kelly)
+
+---
+
+# 4.x Best practices & tips
+
+---
+
+## View padding  (Kelly)
+
+---
+
+## UI Components (Kelly)
+
+---
+
+## New widget stuff (Matt)
+
+---
+
+## deprecated stuff (Matt)
+
+---
+
+## promises (Matt)
+
+---
+
+## Cleaner stuff (responsive, etc, detailed) (Matt)
+
+- 1 Popup: Popups/PopupTemplates
+
+---
+
+# Resources
+
+- Geonet/support/rene/github/sass (Kelly)
+  - Still more to do! (Matt)
+  
 ---
 
 ## Additional Resources
