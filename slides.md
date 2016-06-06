@@ -1,4 +1,4 @@
-<!-- .slide: data-background="./reveal.js/img/title.png" -->
+<!-- .slide: data-background="./images/slide-background.png" -->
 
 <!-- Presenter: -->
 # ArcGIS API 4.0 for JavaScript: Patterns and Best Practices
@@ -139,8 +139,8 @@
 # Resources
 
 - Geonet/support/rene/github/sass (Kelly)
-  - Still more to do! (Matt)
-  
+- Still more to do! (Matt)
+
 ---
 
 ## Additional Resources
@@ -149,14 +149,11 @@
 
 ---
 
-# Rate Us!
+# Please take our Survey
 
-## Esri Events Mobile App - http://www.esri.com/events/eventsapp
+## Your feedback allows us to help maintain high standards and to help presenters
 
-- iOS
-- Android
-
-Search for *"JavaScript: Patterns and Best Practices"*.
+![Rate us](./images/rate-us.png)
 
 ---
 
@@ -166,4 +163,4 @@ Questions?
 
 ---
 
-<!-- .slide: data-background="./reveal.js/img/end.png" -->
+<!-- .slide: data-background="./images/slide-background.png" -->
