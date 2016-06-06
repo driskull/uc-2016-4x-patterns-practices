@@ -1,4 +1,4 @@
-<!-- .slide: data-background="./images/slide-background.png" -->
+<!-- .slide: data-background="./reveal.js/img/title.png" -->
 
 <!-- Presenter: -->
 # ArcGIS API 4.0 for JavaScript: Patterns and Best Practices
@@ -163,4 +163,4 @@ Questions?
 
 ---
 
-<!-- .slide: data-background="./images/slide-background.png" -->
+<!-- .slide: data-background="./reveal.js/img/end.png" -->
