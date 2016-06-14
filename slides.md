@@ -24,22 +24,25 @@
 
 ---
 
-## Goals
+## Goals: Next generation ArcGIS JavaScript API
 
-- next generation ArcGIS JavaScript API
-- cutting edge features
 - 2D/3D Visiualization
   - web maps and scenes
-- improved developer experience
-  - Consistency
+- Improved developer experience
+  - consistency
 - Widget and API redesigns
+  - Model/View Model separation
+  - Library/Framework agnostic
 - Documentation enhancements
+- Integrate with Portal
+- Use cutting edge features
 
 ---
 
 ## Major Design Changes
 
 - Map / View Separation
+- Widget View/View Model separation
 
 ---
 
@@ -74,6 +77,7 @@
 ---
 
 ## More to come
+- Still more to do!
 
 ---
 
@@ -81,61 +85,65 @@
 
 ---
 
-## Map/View separation (Matt)
+<!-- Presenter: Matt -->
+## Map/View separation
 
 ---
 
-## FeatureLayer (Matt)
+## FeatureLayer
 
 ---
 
-## Graphics Layer (Kelly)
+<!-- Presenter: Kelly -->
+## Graphics Layer
 
 ---
 
-##  Theming (Matt)
+<!-- Presenter: Matt -->
+##  Theming
 
 - Sass 
 
 ---
 
-## Portal changes  (Matt) (Briefly)
+## Portal changes (Briefly)
 
 ---
 
-## Basemaps (Matt)
+## Basemaps
 
 ---
 
-## Accessor (Matt)
+## Accessor
 
 ---
 
-## watchUtils (Kelly)
+<!-- Presenter: Kelly -->
+## watchUtils
 
 ---
 
-## Collections (Kelly)
+## Collections
 
 ---
 
-## Responsive General changes (Kelly)
+## Responsive General changes
 
 ---
 
-## Layer/LayerView (Kelly)
+## Layer/LayerView
 
 ---
 
-## Webmap (Kelly)
+## Webmap
 
 ---
 
-## WebScene (Kelly) if time
+## WebScene (if time)
 
 ---
 
-## UI Components (Kelly)
+## UI Components
 
 ---
 
@@ -143,41 +151,37 @@
 
 ---
 
-## View padding  (Kelly)
+## View padding
 
 ---
 
-## UI Components (Kelly)
+## UI Components
 
 ---
 
-## New widget stuff (Matt)
+<!-- Presenter: Matt -->
+## New widget stuff
 
 ---
 
-## deprecated stuff (Matt)
+## deprecated stuff
 
 ---
 
-## promises (Matt)
+## promises
 
 ---
 
-## Cleaner stuff (responsive, etc, detailed) (Matt)
+## Cleaner stuff (responsive, etc, detailed)
 
 - 1 Popup: Popups/PopupTemplates
 
 ---
 
-# Resources
+<!-- Presenter: Kelly + Matt -->
+# Additional Resources
 
 - Geonet/support/rene/github/sass (Kelly)
-- Still more to do! (Matt)
-
----
-
-## Additional Resources
-
 - [Documentation - 4.0 beta](https://developers.arcgis.com/javascript/beta/)
 
 ---
