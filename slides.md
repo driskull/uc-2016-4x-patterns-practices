@@ -1,6 +1,6 @@
 <!-- .slide: data-background="./reveal.js/img/title.png" -->
 
-<!-- Presenter: -->
+<!-- Presenter: Matt -->
 # ArcGIS API 4.0 for JavaScript: Patterns and Best Practices
 
 ### Kelly Hutchins – [@kellyhutchins](https://twitter.com/kellyhutchins)
@@ -10,20 +10,53 @@
 
 # Welcome
 
+![Welcome][https://media.giphy.com/media/aCpvwi2tuFQUE/giphy.gif]
+
+---
+
+# Overview
+
+- 4x Goals
+- Migration
+- Signifigant changes
+- Best Practices
+- Resources
+
 ---
 
 ## Goals
+
+- next generation ArcGIS JavaScript API
+- cutting edge features
+- 2D/3D Visiualization
+  - web maps and scenes
+- improved developer experience
+  - Consistency
+- Widget and API redesigns
+- Documentation enhancements
 
 ---
 
 ## Major Design Changes
 
+- Map / View Separation
+
 ---
 
 ## Supported Browsers (modernization)
 
+- Chrome
+- Firefox
+- Edge
+- Safari 7.1+
+- OS Safari
+- IE11*
+
+*The WebGL implementation of Internet Explorer is not optimized for memory-intensive applications and it might not work reliably when opening certain scenes.
+
 ---
 
+<!-- Presenter: Kelly -->
 # 4.x Migration
 
 ---
