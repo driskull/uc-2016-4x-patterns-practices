@@ -100,12 +100,6 @@
 
 ---
 
-<!-- Presenter: Kelly -->
-## Graphics Layer
-
----
-
-<!-- Presenter: Matt -->
 ##  Theming
 
 - Sass 
@@ -126,6 +120,10 @@
 ---
 
 <!-- Presenter: Kelly -->
+## Graphics Layer
+
+---
+
 ## watchUtils
 
 ---
