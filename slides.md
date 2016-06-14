@@ -24,7 +24,7 @@
 
 ---
 
-## Goals: Next generation ArcGIS JavaScript API
+## Goals: 4x JavaScript API
 
 - 2D/3D Visiualization
   - web maps and scenes
