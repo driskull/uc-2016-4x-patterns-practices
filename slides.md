@@ -30,6 +30,7 @@
   - web maps and scenes
 - Improved developer experience
   - consistency
+  - promises
 - Widget and API redesigns
   - Model/View Model separation
   - Library/Framework agnostic
