@@ -93,6 +93,11 @@
 
 ## FeatureLayer
 
+
+---
+
+### Loadable
+
 ---
 
 <!-- Presenter: Kelly -->
@@ -107,7 +112,8 @@
 
 ---
 
-## Portal changes (Briefly)
+<!-- Briefly -->
+## Portal changes
 
 ---
 
@@ -140,7 +146,8 @@
 
 ---
 
-## WebScene (if time)
+<!-- Briefly -->
+## WebScene
 
 ---
 
@@ -173,7 +180,8 @@
 
 ---
 
-## Cleaner stuff (responsive, etc, detailed)
+<!-- (responsive, etc, detailed) -->
+## Cleaner stuff
 
 - 1 Popup: Popups/PopupTemplates
 
