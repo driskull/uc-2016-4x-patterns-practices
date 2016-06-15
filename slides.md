@@ -35,15 +35,15 @@
   - Model/View Model separation
   - Library/Framework agnostic
 - Documentation enhancements
-- Integrate with Portal
+- Integration with Portal
 - Use cutting edge features
 
 ---
 
 ## Major Design Changes
 
-- Map / View Separation
-- Widget View/View Model separation
+- Map/View separation
+- Widget View/ViewModel separation
 
 ---
 
@@ -82,12 +82,50 @@
 
 ---
 
+<!-- Presenter: Matt -->
 # 4.x Signifigant changes
 
 ---
 
-<!-- Presenter: Matt -->
 ## Map/View separation
+
+### 3.x
+```javascript
+var map = new Map( ... );
+```
+
+### 4.x
+```javascript
+var myMap = new Map({
+  basemap: "streets"
+});
+var view = new MapView({
+  map: myMap,  // References a Map instance
+  container: "viewDiv"  // References the ID of a DOM element
+});
+```
+
+---
+
+## Map/View separation: Multiple views
+
+```javascript
+require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domReady!"], function(Map, MapView) {
+
+  var myMap = new Map({
+    basemap: 'streets'
+  });
+
+  var 2dView = new MapView({
+    map: myMap
+  });
+
+  var 3dView = new SceneView({
+    map: myMap
+  });
+  
+});
+```
 
 ---
 
