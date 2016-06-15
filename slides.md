@@ -87,7 +87,13 @@
 
 ---
 
+## Autocasting
+
+---
+
 ## Map/View separation
+
+Separation of data vs presentation
 
 ### 3.x
 ```javascript
