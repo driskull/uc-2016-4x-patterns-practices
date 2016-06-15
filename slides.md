@@ -220,6 +220,23 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
 
 ## promises
 
+### 3.x
+```javascript
+// map loaded
+if (map.loaded) {
+  init();
+} else {
+  on.once(map, 'load', init);
+}
+
+```
+
+### 4.x
+```javascript
+view.then(init);
+
+```
+
 ---
 
 <!-- (responsive, etc, detailed) -->
