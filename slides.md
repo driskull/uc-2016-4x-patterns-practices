@@ -3,6 +3,8 @@
 <!-- Presenter: Matt -->
 # ArcGIS API 4.0 for JavaScript: Patterns and Best Practices
 
+![qr](./images/qr.jpg)
+
 ### Kelly Hutchins – [@kellyhutchins](https://twitter.com/kellyhutchins)
 ### Matt Driscoll – [@driskull](https://twitter.com/driskull)
 
@@ -10,7 +12,7 @@
 
 # Welcome
 
-![Welcome][https://media.giphy.com/media/aCpvwi2tuFQUE/giphy.gif]
+![Welcome](./images/welcome.gif)
 
 ---
 
@@ -281,6 +283,5 @@ Questions?
 ![Thanks](./images/thanks.gif)
 
 ---
-
 
 <!-- .slide: data-background="./reveal.js/img/end.png" -->
