@@ -254,7 +254,15 @@ view.then(init);
 
 ---
 
-# Please take our Survey
+# Get The Code
+
+## [bit.ly/4xpatterns](http://bit.ly/4xpatterns)
+
+![code](./images/computer-gif.gif)
+
+---
+
+# Please take our survey
 
 ## Your feedback allows us to help maintain high standards and to help presenters
 
@@ -266,6 +274,13 @@ view.then(init);
 
 Questions?
 
+![questions](./images/hands.gif)
+
 ---
+
+![Thanks](./images/thanks.gif)
+
+---
+
 
 <!-- .slide: data-background="./reveal.js/img/end.png" -->
