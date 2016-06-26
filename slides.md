@@ -10,13 +10,11 @@
 
 ---
 
-# Welcome
-
 ![Welcome](./images/welcome.gif)
 
 ---
 
-# Overview
+# Agenda
 
 - 4x Goals
 - Migration
@@ -38,7 +36,7 @@
   - Library/Framework agnostic
 - Documentation enhancements
 - Integration with Portal
-- Use cutting edge features
+- Use of cutting edge features
 
 ---
 
@@ -152,6 +150,11 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
 
 ---
 
+
+## Renamed constant string values
+
+---
+
 <!-- Briefly -->
 ## Portal changes
 
@@ -162,6 +165,10 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
 ---
 
 ## Accessor
+
+---
+
+## Accessor properties
 
 ---
 
@@ -253,6 +260,8 @@ view.then(init);
 
 - Geonet/support/rene/github/sass (Kelly)
 - [Documentation - 4.0 beta](https://developers.arcgis.com/javascript/beta/)
+- [4x What's new](https://developers.arcgis.com/javascript/latest/guide/whats-new/index.html)
+- [4x FAQ](https://developers.arcgis.com/javascript/latest/guide/faq/index.html)
 
 ---
 
