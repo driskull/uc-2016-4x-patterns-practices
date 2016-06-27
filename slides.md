@@ -240,6 +240,8 @@ todo: ask what should go here?
 
 ## watchUtils
 
+Watch accessor properties instead of listening to events.
+
 ---
 
 ## Collections
@@ -307,6 +309,8 @@ todo: needs to be after layerview
 
 # Signifigant changes: Widgets
 
+esri dijits are now widgets
+
 ---
 
 ##  Theming
@@ -319,12 +323,25 @@ todo: needs to be after layerview
 
 ---
 
-## New widget stuff
+## Accessor
+
+- Accessor.get("my.property.here");
+
+---
+
+## Widget best practices
 
 ---
 
 ## deprecated stuff
 
+- no need for some things
+      - lang.hitch, use .bind(this)
+      - ie11+
+      - border containers, form widgets. Just use flexbox or native input elements
+      - dojo/base/array. Use native array functions.
+
+---
 
 <!-- (responsive, etc, detailed) -->
 ## Cleaner stuff
