@@ -17,37 +17,42 @@
 # Agenda
 
 - 4x Goals
-- Migration
-- Signifigant changes
-- Best Practices
+- 3x &#8594; 4x Migration
+- 4x Signifigant changes
+- 4x Best Practices
 - Resources
 
 ---
 
-## Goals: 4x JavaScript API
+# Goals: 4x JavaScript API
 
 - 2D/3D Visiualization
   - web maps and scenes
 - Improved developer experience
   - consistency
+  - predictable
   - promises
-- Widget and API redesigns
-  - Model/View Model separation
+- Widgets
+  - Modernize
   - Library/Framework agnostic
-- Documentation enhancements
-- Integration with Portal
-- Use of cutting edge features
+  - User experience
+- Enhance documentation
+- Improve integration with Portal
+- Use cutting edge browser features
 
 ---
 
-## Major Design Changes
+# Major Design Changes
 
 - Map/View separation
 - Widget View/ViewModel separation
+- Accessor class
+- Autocasting
+- Popups
 
 ---
 
-## Supported Browsers (modernization)
+# Supported Browsers (modernization)
 
 - Chrome
 - Firefox
@@ -62,6 +67,8 @@
 
 <!-- Presenter: Kelly -->
 # 4.x Migration
+
+![Migration](./images/migration.gif)
 
 ---
 
@@ -85,15 +92,41 @@
 <!-- Presenter: Matt -->
 # 4.x Signifigant changes
 
----
-
-## Autocasting
+![changes](./images/changes.gif)
 
 ---
 
-## Map/View separation
+## [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
 
-Separation of data vs presentation
+```js
+var symbol = new SimpleMarkerSymbol({
+  style: "diamond",
+  color: [255, 128, 45],  // No need to write new Color()
+  outline: {              // No need for new SimpleLineSymbol()
+    style: "dash-dot",
+    color: [255, 128, 45] // Again, no need for new Color()
+  }
+});
+```
+
+VS
+
+```js
+var symbol = new SimpleMarkerSymbol({
+  style: "diamond",
+  color: new Color([255, 128, 45]),
+  outline: new SimpleLineSymbol({
+    style: "dash-dot",
+    color: new Color([255, 128, 45])
+  })
+});
+```
+
+---
+
+## Map & View separation
+
+Map (data) and view (presentation) are broken apart.
 
 ### 3.x
 ```javascript
@@ -116,7 +149,11 @@ var view = new MapView({
 ## Map/View separation: Multiple views
 
 ```javascript
-require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domReady!"], function(Map, MapView) {
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/views/SceneView"
+], function(Map, MapView, SceneView) {
 
   var myMap = new Map({
     basemap: 'streets'
@@ -129,9 +166,14 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
   var 3dView = new SceneView({
     map: myMap
   });
-  
 });
 ```
+
+---
+
+# Demo
+
+todo: Demo webmap with 2d/3d view
 
 ---
 
@@ -172,7 +214,49 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
 
 ---
 
+## New widget stuff
+
+---
+
+## deprecated stuff
+
+---
+
+## promises
+
+### 3.x
+```javascript
+// map loaded
+if (map.loaded) {
+  init();
+} else {
+  on.once(map, 'load', init);
+}
+
+```
+
+### 4.x
+```javascript
+view.then(init);
+
+```
+
+---
+
+<!-- (responsive, etc, detailed) -->
+## Cleaner stuff
+
+- 1 Popup: Popups/PopupTemplates
+
+---
+
 <!-- Presenter: Kelly -->
+# 4.x Signifigant changes: contiuned
+
+![more](./images/more.gif)
+
+---
+
 ## Graphics Layer
 
 ---
@@ -218,43 +302,6 @@ require(["esri/Map", "esri/views/MapView", "esri/views/SceneView", "dojo/domRead
 
 ---
 
-<!-- Presenter: Matt -->
-## New widget stuff
-
----
-
-## deprecated stuff
-
----
-
-## promises
-
-### 3.x
-```javascript
-// map loaded
-if (map.loaded) {
-  init();
-} else {
-  on.once(map, 'load', init);
-}
-
-```
-
-### 4.x
-```javascript
-view.then(init);
-
-```
-
----
-
-<!-- (responsive, etc, detailed) -->
-## Cleaner stuff
-
-- 1 Popup: Popups/PopupTemplates
-
----
-
 <!-- Presenter: Kelly + Matt -->
 # Additional Resources
 
@@ -269,7 +316,7 @@ view.then(init);
 
 ## [bit.ly/4xpatterns](http://bit.ly/4xpatterns)
 
-![code](./images/computer-gif.gif)
+![code](./images/code.gif)
 
 ---
 
@@ -281,11 +328,9 @@ view.then(init);
 
 ---
 
-# Q & A
+# Questions?
 
-Questions?
-
-![questions](./images/hands.gif)
+![questions](./images/questions.gif)
 
 ---
 
