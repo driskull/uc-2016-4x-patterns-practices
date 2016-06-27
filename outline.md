@@ -10,29 +10,42 @@
   - New SDK
   - Not everything there yet
 - Signifigant changes (25 Minutes)
-  - Map/View separation (Matt)
-  - FeatureLayer (Matt)
-  - Graphics Layer (Kelly)
-  - Theming (Matt)
-    - Sass 
-  - Portal changes  (Matt) (Briefly)
-  - Basemaps (Matt)
+  - Autocasting
+  - Map (Matt)
+    - Map/View separation
+    - Basemaps
+  - View (Kelly)
+    - UI Components
+    - Responsive General changes
+      - size classes
+      - breakpoints
+    - Padding
+  - Webmap + Webscene (Kelly)
+    - Webmap 
+    - WebScene
+  - Portal changes  (Kelly)
   - Accessor (Matt)
-  - watchUtils (Kelly)
-  - Collections (Kelly)
-  - Responsive General changes (Kelly)
-  - Layer/LayerView (Kelly)
-  - Webmap (Kelly)
-  - WebScene (Kelly) if time
-  - UI Components (Kelly)
+    - Accessor
+    - watchUtils
+    - Collections
+  - Promises (Matt)
+    - Loadable
+  - Layers (Matt)
+    - FeatureLayer
+    - Graphics Layer
+    - Layer/LayerView
+  - Widgets (Matt)
+    - Sass 
+    - Theming
+    - Popup
 - Best practices & tips (25 Minutes)
   - View padding  (Kelly)
   - UI Components (Kelly)
   - New widget stuff (Matt)
   - deprecated stuff (Matt)
   - promises (Matt)
-  - Cleaner stuff (responsive, etc, detailed) (Matt)
-    - 1 Popup: Popups/PopupTemplates
+  - Cleaner stuff (responsive, etc, detailed) (Kelly)
+  - 1 Popup: Popups/PopupTemplates
 - Closing (5 minutes)
   - Geonet/support/rene/github/sass (Kelly)
   - Still more to do! (Matt)

@@ -96,7 +96,7 @@
 
 ---
 
-## [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
+# Signifigant changes: [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
 
 ```js
 var symbol = new SimpleMarkerSymbol({
@@ -121,6 +121,20 @@ var symbol = new SimpleMarkerSymbol({
   })
 });
 ```
+
+---
+
+# Signifigant changes: Map
+
+---
+
+## Basemaps
+
+todo: ask what should go here
+
+---
+
+# Signifigant changes: View
 
 ---
 
@@ -171,38 +185,38 @@ require([
 
 ---
 
-# Demo
+## Map/View separation: Demo
 
 todo: Demo webmap with 2d/3d view
 
 ---
 
-## FeatureLayer
 
-
----
-
-### Loadable
+# Signifigant changes: Webmap + Webscene
 
 ---
 
-##  Theming
-
-- Sass 
+## Webmap
 
 ---
 
+<!-- Briefly -->
+## WebScene
 
-## Renamed constant string values
+---
+
+# Signifigant changes: Portal
 
 ---
 
 <!-- Briefly -->
 ## Portal changes
 
+todo: ask what should go here?
+
 ---
 
-## Basemaps
+# Signifigant changes: Accessor
 
 ---
 
@@ -214,11 +228,15 @@ todo: Demo webmap with 2d/3d view
 
 ---
 
-## New widget stuff
+## watchUtils
 
 ---
 
-## deprecated stuff
+## Collections
+
+---
+
+# Signifigant changes: Promises
 
 ---
 
@@ -243,17 +261,7 @@ view.then(init);
 
 ---
 
-<!-- (responsive, etc, detailed) -->
-## Cleaner stuff
-
-- 1 Popup: Popups/PopupTemplates
-
----
-
-<!-- Presenter: Kelly -->
-# 4.x Signifigant changes: contiuned
-
-![more](./images/more.gif)
+# Signifigant changes: Layers
 
 ---
 
@@ -261,15 +269,22 @@ view.then(init);
 
 ---
 
-## watchUtils
+## FeatureLayer
+
+todo: needs to be after layerview
+
+- Has a LayerView
+- FeatureLayerView
+- Create from portal item
+- Create from array of graphics
+- Client definitionExpression support
+
 
 ---
 
-## Collections
+### Loadable
 
----
-
-## Responsive General changes
+featureLayer.load()
 
 ---
 
@@ -277,20 +292,35 @@ view.then(init);
 
 ---
 
-## Webmap
+# Signifigant changes: Widgets
 
 ---
 
-<!-- Briefly -->
-## WebScene
+##  Theming
 
----
-
-## UI Components
+- Sass 
 
 ---
 
 # 4.x Best practices & tips
+
+---
+
+## New widget stuff
+
+---
+
+## deprecated stuff
+
+
+<!-- (responsive, etc, detailed) -->
+## Cleaner stuff
+
+- 1 Popup: Popups/PopupTemplates
+
+---
+
+## Responsive General changes
 
 ---
 
@@ -299,6 +329,14 @@ view.then(init);
 ---
 
 ## UI Components
+
+---
+
+## Renamed constant string values
+
+- `simplemarkersymbol` &#8594; `simple-marker-symbol`
+- `picturemarkersymbol` &#8594; `picture-marker-symbol`
+- `simplelinesymbo`l &#8594; `simple-line-symbol`
 
 ---
 
