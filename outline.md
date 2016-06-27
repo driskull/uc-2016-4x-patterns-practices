@@ -10,8 +10,7 @@
   - New SDK
   - Not everything there yet
 - Signifigant changes (25 Minutes)
-  - Autocasting
-  - Map (Matt)
+  - Map (Kelly)
     - Map/View separation
     - Basemaps
   - View (Kelly)
@@ -25,9 +24,15 @@
     - WebScene
   - Portal changes  (Kelly)
   - Accessor (Matt)
-    - Accessor
+    - What is it
+    - Getting Properties
+    - Setting properties
+    - Watching properties
     - watchUtils
     - Collections
+    - toJSON
+    - fromJSON
+  - Autocasting (Matt)
   - Promises (Matt)
     - Loadable
   - Layers (Matt)
@@ -38,13 +43,19 @@
     - Sass 
     - Theming
     - Popup
+    - NavigationToggle
+    - Compass
+    - Track/Locate
+    - icon font
+    
 - Best practices & tips (25 Minutes)
+  - Choosing a version (Kelly)
   - View padding  (Kelly)
   - UI Components (Kelly)
+  - Cleaner stuff (responsive, etc, detailed) (Kelly)
   - New widget stuff (Matt)
   - deprecated stuff (Matt)
   - promises (Matt)
-  - Cleaner stuff (responsive, etc, detailed) (Kelly)
   - 1 Popup: Popups/PopupTemplates
 - Closing (5 minutes)
   - Geonet/support/rene/github/sass (Kelly)
