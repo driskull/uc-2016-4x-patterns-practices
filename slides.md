@@ -92,7 +92,7 @@
 <!-- Presenter: Matt -->
 # 4.x Signifigant changes
 
-![changes](./images/changes.gif)
+![more](./images/more.gif)
 
 ---
 
@@ -320,6 +320,8 @@ esri dijits are now widgets
 ---
 
 # 4.x Best practices & tips
+
+![changes](./images/changes.gif)
 
 ---
 
