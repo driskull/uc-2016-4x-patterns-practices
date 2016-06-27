@@ -47,7 +47,6 @@
     - Compass
     - Track/Locate
     - icon font
-    
 - Best practices & tips (25 Minutes)
   - Choosing a version (Kelly)
   - View padding  (Kelly)
