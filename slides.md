@@ -275,7 +275,13 @@ view.then(init);
 
 ---
 
-## Graphics Layer
+### Loadable
+
+featureLayer.load()
+
+---
+
+## Layer/LayerView
 
 ---
 
@@ -289,16 +295,13 @@ todo: needs to be after layerview
 - Create from array of graphics
 - Client definitionExpression support
 
+---
+
+## Graphics Layer
 
 ---
 
-### Loadable
-
-featureLayer.load()
-
----
-
-## Layer/LayerView
+## Group Layer
 
 ---
 
