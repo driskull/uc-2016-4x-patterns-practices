@@ -185,6 +185,16 @@ require([
 
 ---
 
+## Map/View separation: Camera
+
+---
+
+## Map/View separation: Navigation
+
+view.goTo()
+
+---
+
 ## Map/View separation: Demo
 
 todo: Demo webmap with 2d/3d view
