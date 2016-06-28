@@ -230,11 +230,21 @@ todo: ask what should go here?
 
 ---
 
+<!-- Presenter: Matt -->
 ## Accessor
+
+- New class inherited by most Esri classes
+- Handles getting/setting properties
+- Handles watching properties
+- Provides a common developer experience
 
 ---
 
 ## Accessor properties
+
+accessorClass.property = "set property";
+
+var getter = accessorClass.property;
 
 ---
 
@@ -242,13 +252,25 @@ todo: ask what should go here?
 
 Watch accessor properties instead of listening to events.
 
+```js
+watchUtils.init(accessorClass.property, function(){
+
+});
+```
+
 ---
 
 ## Collections
 
+// todo
+
 ---
 
 # Signifigant changes: Promises
+
+- Easier, more consistent way for watching load
+- uses .then(), .always(), .otherwise()
+- much simpler
 
 ---
 
