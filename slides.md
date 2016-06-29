@@ -177,7 +177,8 @@ function(newValue, oldValue, property, object) {
 Various utilities and convenience functions for watching Accessor properties.
 
 ```js
-watchUtils.init(accessorClass.property, function(newValue, oldValue, propertyName, target){
+watchUtils.init(accessorClass.property,
+function(newValue, oldValue, propertyName, target){
   console.log(newValue, oldValue, propertyName, target);
 });
 ```
