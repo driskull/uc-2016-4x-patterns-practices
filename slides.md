@@ -21,7 +21,7 @@
 - 4x Goals
 - 3x &#8594; 4x Migration
 - 4x Signifigant changes
-- 4x Best Practices
+- 4x Tips & Best Practices
 - Resources
 
 ---
