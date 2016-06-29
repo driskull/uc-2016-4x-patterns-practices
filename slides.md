@@ -305,7 +305,8 @@ Example: layer.load() once layer is added to a view. Otherwise, don't start load
 # LayerView
 
 - Represents the view for a single layer
- - after it has been added to either a MapView or a SceneView.
+  - after it has been added to either a MapView or a SceneView.
+- Views have layerViews collection
 
 ---
 
@@ -360,27 +361,51 @@ lyr = new FeatureLayer({
 
 # Graphics Layer
 
-// todo
+- Similar to 3x
+- Different method calls
+
+[Graphics Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html)
 
 ---
 
 # Group Layer
 
-// todo
+- Organize layers into common layer
+- Visibility manager
+  - listMode
+    - show
+    - hide
+    - hide-children
+  - visibilityMode
+    - independent
+    - inherited
+    - exclusive
+    
+// todo: find scene with group layer to demo
 
 ---
 
 # Signifigant changes: Widgets
 
-- esri dijits are now widgets
-
-// todo
+- Esri Dijits are now called Widgets
+- Simplified getting, setting, and watching widgets to be more simplistic and consistent
+  - Widgets extend a form of Accessor + _WidgetBase
+- Combined Attribution and logo widgets into new Attribution widget
+- Divided the Locate widget into updated Locate widget and new Track widget
+- Updated design to match Esri "Calcite" styling
+  - More modern looking
+- Added 3D specific widgets
+  - [Compass](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
+  - [NavigationToggle](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle.html)
+- Redesigned Popups
+- Widgets are using SASS
+- Still many widgets to port!
 
 ---
 
-# Theming
+# Widgets: Theming
 
-- Sass
+- Sass demo
 
 // todo
 
@@ -388,6 +413,8 @@ lyr = new FeatureLayer({
 
 <!-- Presenter: Kelly -->
 # Signifigant changes: Map
+
+- Map.graphics is a collection, not a layer
 
 ---
 
