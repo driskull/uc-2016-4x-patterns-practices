@@ -97,7 +97,7 @@
 ---
 
 <!-- Presenter: Matt -->
-# Signifigant changes: [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
+# [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
 
 ```js
 var symbol = new SimpleMarkerSymbol({
@@ -127,44 +127,92 @@ var symbol = new SimpleMarkerSymbol({
 
 ## Accessor
 
-- New class inherited by most Esri classes
-- Handles getting/setting properties
-- Handles watching properties
+- abstract class
+- facilitates the access to instance properties
+- mechanism to watch for property changes
+- inherited by most Esri classes
 - Provides a common developer experience
+
+> Inheritance: View &#8594; Accessor
 
 ---
 
 ## Accessor properties
 
-accessorClass.property = "set property";
+### Get Property
 
-var getter = accessorClass.property;
+```js
+var basemapTitle = map.get("basemap.title");
+```
 
 ---
 
-## watchUtils
+## Accessor properties
 
-Watch accessor properties instead of listening to events.
+### Set Property
 
 ```js
-watchUtils.init(accessorClass.property, function(){
- // todo
+ view.center = [ -100, 40 ];
+ view.zoom = 6;
+ map.basemap = 'oceans'; 
+```
+
+---
+
+## Accessor properties
+
+### Watch Property
+
+```js
+var handle = map.watch('basemap.title',
+function(newValue, oldValue, property, object) {
+  console.log(newValue, oldValue, property, object);
 });
 ```
 
 ---
 
+## watchUtils
+
+Various utilities and convenience functions for watching Accessor properties.
+
+```js
+watchUtils.init(accessorClass.property, function(newValue, oldValue, propertyName, target){
+  console.log(newValue, oldValue, propertyName, target);
+});
+```
+
+[SDK](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-watchUtils.html)
+
+---
+
 ## Collections
 
-// todo
+- generic object
+- stores an array of items of the same type
+- provides useful utility methods for working with items
+  - filter()
+  - find()
+  - reduce()
+
+examples: map.layers, popup.actions
 
 ---
 
 # Signifigant changes: Promises
 
-- Easier, more consistent way for watching load
-- uses .then(), .always(), .otherwise()
-- much simpler
+- handle asynchronous operations
+- future value returned
+- 3 states
+  - pending
+  - resolved
+  - rejected.
+- Methods
+  - then
+
+[Working with promises](https://developers.arcgis.com/javascript/latest/guide/working-with-promises/index.html)
+
+// todo: needs more in depth work
 
 ---
 
@@ -242,8 +290,6 @@ esri dijits are now widgets
 
 ## Basemaps
 
-todo: ask what should go here
-
 ---
 
 # Signifigant changes: View
@@ -309,8 +355,6 @@ view.goTo()
 
 ## Map/View separation: Demo
 
-todo: Demo webmap with 2d/3d view
-
 ---
 
 # Signifigant changes: Webmap + Webscene
@@ -332,8 +376,6 @@ todo: Demo webmap with 2d/3d view
 
 <!-- Briefly -->
 ## Portal changes
-
-todo: ask what should go here?
 
 ---
 
