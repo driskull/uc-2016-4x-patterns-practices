@@ -1,6 +1,6 @@
 # Outline (65 Minutes + 10 for questions)
 
-- Intro (Matt) [What and why] (5 minutes)
+- Intro (Matt) What and why (5 minutes)
   - Goals
   - Major design changes and reasons for them
   - Supported browsers (modernization)
