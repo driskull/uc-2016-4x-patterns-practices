@@ -393,7 +393,7 @@ lyr = new FeatureLayer({
 - Esri Dijits are now called Widgets
 - Simplified getting, setting, and watching widgets to be more simplistic and consistent
 - Widgets extend a form of Accessor + _WidgetBase
-  
+
 ---
 
 # Widgets: Enhancements
