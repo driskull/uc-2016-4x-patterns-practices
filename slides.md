@@ -180,7 +180,8 @@ function(newValue, oldValue, property, object) {
 
 # watchUtils
 
-Various utilities and convenience functions for watching Accessor properties.
+- utilities and convenience functions
+- for watching Accessor properties
 
 ```js
 watchUtils.init(accessorClass.property,
@@ -312,7 +313,7 @@ Example: layer.load() once layer is added to a view. Otherwise, don't start load
 
 ---
 
-## FeatureLayer
+# FeatureLayer
 
 - Can be created from
   - Map service
@@ -391,7 +392,7 @@ lyr = new FeatureLayer({
 
 - Esri Dijits are now called Widgets
 - Simplified getting, setting, and watching widgets to be more simplistic and consistent
-  - Widgets extend a form of Accessor + _WidgetBase
+- Widgets extend a form of Accessor + _WidgetBase
   
 ---
 
@@ -428,8 +429,23 @@ lyr = new FeatureLayer({
 
 ---
 
+# Popup Widget
+
+// todo
+
+---
+
+# PopupTemplate
+
+// todo
+
+---
+
 # Widgets: future
 
+- Adding functionality
+- Improving UX/UI
+- Improving Accessibility
 - Still many widgets to port!
 
 ---
@@ -441,7 +457,7 @@ lyr = new FeatureLayer({
 
 ---
 
-## Basemaps
+# Basemaps
 
 ---
 
@@ -449,16 +465,16 @@ lyr = new FeatureLayer({
 
 ---
 
-## Map & View separation
+# Map & View separation
 
 Map (data) and view (presentation) are broken apart.
 
-### 3.x
+## 3.x
 ```javascript
 var map = new Map( ... );
 ```
 
-### 4.x
+## 4.x
 ```javascript
 var myMap = new Map({
   basemap: "streets"
@@ -471,7 +487,7 @@ var view = new MapView({
 
 ---
 
-## Map/View separation: Multiple views
+# Map/View separation: Multiple views
 
 ```javascript
 require([
@@ -496,17 +512,17 @@ require([
 
 ---
 
-## Map/View separation: Camera
+# Map/View separation: Camera
 
 ---
 
-## Map/View separation: Navigation
+# Map/View separation: Navigation
 
 view.goTo()
 
 ---
 
-## Map/View separation: Demo
+# Map/View separation: Demo
 
 ---
 
@@ -514,12 +530,12 @@ view.goTo()
 
 ---
 
-## Webmap
+# Webmap
 
 ---
 
 <!-- Briefly -->
-## WebScene
+# WebScene
 
 ---
 
@@ -528,7 +544,7 @@ view.goTo()
 ---
 
 <!-- Briefly -->
-## Portal changes
+# Portal changes
 
 ---
 
@@ -550,7 +566,7 @@ view.goTo()
 
 ---
 
-# deprecated stuff
+# Deprecated things
 
 - Modernize your code
 - no need for some things
@@ -574,25 +590,22 @@ view.goTo()
 
 ---
 
-<!-- (responsive, etc, detailed) -->
-## Cleaner stuff
-
-- 1 Popup: Popups/PopupTemplates
+# Responsive tips
 
 // todo
 
 ---
 
 <!-- Presenter: Kelly -->
-## Responsive General changes
+# Responsive General changes
 
 ---
 
-## View padding
+# View padding
 
 ---
 
-## UI Components
+# UI Components
 
 ---
 
