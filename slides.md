@@ -5,12 +5,14 @@
 
 ![qr](./images/qr.jpg)
 
-### Kelly Hutchins – [@kellyhutchins](https://twitter.com/kellyhutchins)
-### Matt Driscoll – [@driskull](https://twitter.com/driskull)
+[bit.ly/4xpatterns](http://bit.ly/4xpatterns)
 
 ---
 
 ![Welcome](./images/welcome.gif)
+
+### Kelly Hutchins – [@kellyhutchins](https://twitter.com/kellyhutchins)
+### Matt Driscoll – [@driskull](https://twitter.com/driskull)
 
 ---
 
@@ -385,11 +387,16 @@ lyr = new FeatureLayer({
 
 ---
 
-# Signifigant changes: Widgets
+# Widgets
 
 - Esri Dijits are now called Widgets
 - Simplified getting, setting, and watching widgets to be more simplistic and consistent
   - Widgets extend a form of Accessor + _WidgetBase
+  
+---
+
+# Widgets: Enhancements
+
 - Combined Attribution and logo widgets into new Attribution widget
 - Divided the Locate widget into updated Locate widget and new Track widget
 - Updated design to match Esri "Calcite" styling
@@ -398,8 +405,18 @@ lyr = new FeatureLayer({
   - [Compass](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
   - [NavigationToggle](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle.html)
 - Redesigned Popups
+
+---
+
+# Widgets: View Models
+
+// todo
+
+---
+
+# Widgets: SASS
+
 - Widgets are using SASS
-- Still many widgets to port!
 
 ---
 
@@ -408,6 +425,12 @@ lyr = new FeatureLayer({
 - Sass demo
 
 // todo
+
+---
+
+# Widgets: future
+
+- Still many widgets to port!
 
 ---
 
@@ -516,18 +539,20 @@ view.goTo()
 
 ---
 
-## Accessor
+# Accessor
 
+- Get comfortable with Accessor
 - Accessor.get("my.property.here");
 
 ---
 
-## Widget best practices
+# Widget best practices
 
 ---
 
-## deprecated stuff
+# deprecated stuff
 
+- Modernize your code
 - no need for some things
   - lang.hitch
     - use `function(){}.bind(this)`
@@ -539,7 +564,9 @@ view.goTo()
 
 ---
 
-## Renamed constant string values
+# Renamed constant string values
+
+## Kebab-case instead of camelCase
 
 - `simplemarkersymbol` &#8594; `simple-marker-symbol`
 - `picturemarkersymbol` &#8594; `picture-marker-symbol`
