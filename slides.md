@@ -96,6 +96,7 @@
 
 ---
 
+<!-- Presenter: Matt -->
 # Signifigant changes: [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
 
 ```js
@@ -124,6 +125,117 @@ var symbol = new SimpleMarkerSymbol({
 
 ---
 
+## Accessor
+
+- New class inherited by most Esri classes
+- Handles getting/setting properties
+- Handles watching properties
+- Provides a common developer experience
+
+---
+
+## Accessor properties
+
+accessorClass.property = "set property";
+
+var getter = accessorClass.property;
+
+---
+
+## watchUtils
+
+Watch accessor properties instead of listening to events.
+
+```js
+watchUtils.init(accessorClass.property, function(){
+ // todo
+});
+```
+
+---
+
+## Collections
+
+// todo
+
+---
+
+# Signifigant changes: Promises
+
+- Easier, more consistent way for watching load
+- uses .then(), .always(), .otherwise()
+- much simpler
+
+---
+
+## promises
+
+### 3.x
+```javascript
+// map loaded
+if (map.loaded) {
+  init();
+} else {
+  on.once(map, 'load', init);
+}
+
+```
+
+### 4.x
+```javascript
+view.then(init);
+
+```
+
+---
+
+### Loadable
+
+// todo what is loadable
+
+---
+
+### Layer Loadable
+
+---
+
+## Layer/LayerView
+
+---
+
+## FeatureLayer
+
+todo: needs to be after layerview
+
+- Has a LayerView
+- FeatureLayerView
+- Create from portal item
+- Create from array of graphics
+- Client definitionExpression support
+
+---
+
+## Graphics Layer
+
+---
+
+## Group Layer
+
+---
+
+# Signifigant changes: Widgets
+
+esri dijits are now widgets
+
+---
+
+##  Theming
+
+- Sass 
+
+---
+
+<!-- Presenter: Kelly -->
 # Signifigant changes: Map
 
 ---
@@ -201,7 +313,6 @@ todo: Demo webmap with 2d/3d view
 
 ---
 
-
 # Signifigant changes: Webmap + Webscene
 
 ---
@@ -226,121 +337,7 @@ todo: ask what should go here?
 
 ---
 
-# Signifigant changes: Accessor
-
----
-
 <!-- Presenter: Matt -->
-## Accessor
-
-- New class inherited by most Esri classes
-- Handles getting/setting properties
-- Handles watching properties
-- Provides a common developer experience
-
----
-
-## Accessor properties
-
-accessorClass.property = "set property";
-
-var getter = accessorClass.property;
-
----
-
-## watchUtils
-
-Watch accessor properties instead of listening to events.
-
-```js
-watchUtils.init(accessorClass.property, function(){
-
-});
-```
-
----
-
-## Collections
-
-// todo
-
----
-
-# Signifigant changes: Promises
-
-- Easier, more consistent way for watching load
-- uses .then(), .always(), .otherwise()
-- much simpler
-
----
-
-## promises
-
-### 3.x
-```javascript
-// map loaded
-if (map.loaded) {
-  init();
-} else {
-  on.once(map, 'load', init);
-}
-
-```
-
-### 4.x
-```javascript
-view.then(init);
-
-```
-
----
-
-# Signifigant changes: Layers
-
----
-
-### Loadable
-
-featureLayer.load()
-
----
-
-## Layer/LayerView
-
----
-
-## FeatureLayer
-
-todo: needs to be after layerview
-
-- Has a LayerView
-- FeatureLayerView
-- Create from portal item
-- Create from array of graphics
-- Client definitionExpression support
-
----
-
-## Graphics Layer
-
----
-
-## Group Layer
-
----
-
-# Signifigant changes: Widgets
-
-esri dijits are now widgets
-
----
-
-##  Theming
-
-- Sass 
-
----
-
 # 4.x Best practices & tips
 
 ![changes](./images/changes.gif)
@@ -367,6 +364,14 @@ esri dijits are now widgets
 
 ---
 
+## Renamed constant string values
+
+- `simplemarkersymbol` &#8594; `simple-marker-symbol`
+- `picturemarkersymbol` &#8594; `picture-marker-symbol`
+- `simplelinesymbo`l &#8594; `simple-line-symbol`
+
+---
+
 <!-- (responsive, etc, detailed) -->
 ## Cleaner stuff
 
@@ -374,6 +379,7 @@ esri dijits are now widgets
 
 ---
 
+<!-- Presenter: Kelly -->
 ## Responsive General changes
 
 ---
@@ -383,14 +389,6 @@ esri dijits are now widgets
 ---
 
 ## UI Components
-
----
-
-## Renamed constant string values
-
-- `simplemarkersymbol` &#8594; `simple-marker-symbol`
-- `picturemarkersymbol` &#8594; `picture-marker-symbol`
-- `simplelinesymbo`l &#8594; `simple-line-symbol`
 
 ---
 

@@ -10,19 +10,6 @@
   - New SDK
   - Not everything there yet
 - Signifigant changes (25 Minutes)
-  - Map (Kelly)
-    - Map/View separation
-    - Basemaps
-  - View (Kelly)
-    - UI Components
-    - Responsive General changes
-      - size classes
-      - breakpoints
-    - Padding
-  - Webmap + Webscene (Kelly)
-    - Webmap 
-    - WebScene
-  - Portal changes  (Kelly)
   - Accessor (Matt)
     - What is it
     - Getting Properties
@@ -47,15 +34,28 @@
     - Compass
     - Track/Locate
     - icon font
+  - Map (Kelly)
+    - Map/View separation
+    - Basemaps
+  - View (Kelly)
+    - UI Components
+    - Responsive General changes
+      - size classes
+      - breakpoints
+    - Padding
+  - Webmap + Webscene (Kelly)
+    - Webmap 
+    - WebScene
+  - Portal changes  (Kelly)
 - Best practices & tips (25 Minutes)
-  - Choosing a version (Kelly)
-  - View padding  (Kelly)
-  - UI Components (Kelly)
-  - Cleaner stuff (responsive, etc, detailed) (Kelly)
   - New widget stuff (Matt)
   - deprecated stuff (Matt)
   - promises (Matt)
   - 1 Popup: Popups/PopupTemplates
+  - Choosing a version (Kelly)
+  - View padding  (Kelly)
+  - UI Components (Kelly)
+  - Cleaner stuff (responsive, etc, detailed) (Kelly)
 - Closing (5 minutes)
   - Geonet/support/rene/github/sass (Kelly)
   - Still more to do! (Matt)
