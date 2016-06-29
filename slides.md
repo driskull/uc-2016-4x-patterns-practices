@@ -97,7 +97,7 @@
 ---
 
 <!-- Presenter: Matt -->
-# [Autocasting](https://developers.arcgis.com/javascript/latest/guide/autocasting/index.html)
+# Autocasting
 
 ```js
 var symbol = new SimpleMarkerSymbol({
@@ -187,7 +187,7 @@ function(newValue, oldValue, propertyName, target){
 
 ---
 
-## Collections
+# Collections
 
 - generic object
 - stores an array of items of the same type
@@ -197,6 +197,12 @@ function(newValue, oldValue, propertyName, target){
   - reduce()
 
 examples: map.layers, popup.actions
+
+---
+
+# Collections: Event
+
+The change event fires each time an item is added, moved, or removed from the Collection.
 
 ---
 
@@ -210,10 +216,6 @@ examples: map.layers, popup.actions
   - rejected.
 - Methods
   - then
-
-[Working with promises](https://developers.arcgis.com/javascript/latest/guide/working-with-promises/index.html)
-
-// todo: needs more in depth work
 
 ---
 
@@ -238,29 +240,115 @@ view.then(init);
 
 ---
 
+# Promises: then()
+
+- commonly used with the .then() method
+ - allows you to define the callback and errback functions
+
+```js
+someAsyncFunction().then(function(resolvedVal){
+  // This is called when the promise resolves
+  console.log(resolvedVal);
+}, function(error){
+  // This function is called when the promise is rejected
+  console.error(error);
+});
+```
+
+---
+
+# Promises: Rejected
+
+When a promise is rejected, it should be handled in an errback function.
+
+---
+
+# Promises: Why?
+
+Q: why should you use a promise instead of an event listener?
+
+A: Access the result of an asynchronous process directly after it completes
+
+In comparison, if you initialize an event listener after an event has occurred then the listener will never fire.
+
+---
+
+# Promises: Dive deeper
+
+[Working with promises](https://developers.arcgis.com/javascript/latest/guide/working-with-promises/index.html)
+
+---
+
 ### Loadable
 
-// todo what is loadable
+- Loadable is an extension of promise
+- Starts async process once load() is called
+- Used on layers
+  - Layers shouldn't start async process until needed
 
 ---
 
-### Layer Loadable
+# Loadable: Layer
+
+Example: layer.load() once layer is added to a view. Otherwise, don't start loading.
+
+[FeatureLayer.load()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#load)
 
 ---
 
-## Layer/LayerView
+# LayerView
+
+- Represents the view for a single layer
+ - after it has been added to either a MapView or a SceneView.
 
 ---
 
 ## FeatureLayer
 
-todo: needs to be after layerview
-
-- Has a LayerView
-- FeatureLayerView
-- Create from portal item
-- Create from array of graphics
+- Can be created from
+  - Map service
+  - feature service
+  - AGOL/Portal items
+  - client side graphics
+- Supports Map/Scene view
 - Client definitionExpression support
+- Not currently supported
+  - adding geometries
+  - deleting geometries
+  - editing geometries
+- Future editing support
+
+---
+
+# FeatureLayer: Portal Item
+
+```js
+// points to a hosted Feature Layer in ArcGIS Online
+var fl = new FeatureLayer({
+  portalItem: {  // autocasts as esri/portal/PortalItem
+    id: "8444e275037549c1acab02d2626daaee"
+  }
+});
+map.add(fl);  // adds the layer to the map
+```
+
+---
+
+# FeatureLayer: Graphics
+
+```js
+lyr = new FeatureLayer({
+   fields: [
+   {
+     name: "ObjectID",
+     alias: "ObjectID",
+     type: "oid"
+   },...],
+   geometryType: "point",
+   spatialReference: { wkid: 4326 }
+   source: graphics  //  an array of graphics
+});
+```
 
 ---
 
