@@ -5,7 +5,7 @@
 
 ![qr](./images/qr.jpg)
 
-[bit.ly/4xpatterns](http://bit.ly/4xpatterns)
+## bit.ly/4xpatterns
 
 ---
 
