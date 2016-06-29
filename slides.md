@@ -72,19 +72,19 @@
 
 ---
 
-## Matrix
+# Matrix
 
 ---
 
-## CSS Theme
+# CSS Theme
 
 ---
 
-## New SDK
+# New SDK
 
 ---
 
-## More to come
+# More to come
 - Still more to do!
 
 ---
@@ -125,21 +125,25 @@ var symbol = new SimpleMarkerSymbol({
 
 ---
 
-## Accessor
+# Accessor
 
 - abstract class
 - facilitates the access to instance properties
 - mechanism to watch for property changes
-- inherited by most Esri classes
+- inherited by many Esri classes
 - Provides a common developer experience
 
 > Inheritance: View &#8594; Accessor
 
 ---
 
-## Accessor properties
+# Accessor properties
 
-### Get Property
+## Get Property
+
+```js
+var basemap = map.basemap;
+```
 
 ```js
 var basemapTitle = map.get("basemap.title");
@@ -147,9 +151,9 @@ var basemapTitle = map.get("basemap.title");
 
 ---
 
-## Accessor properties
+# Accessor properties
 
-### Set Property
+## Set Property
 
 ```js
  view.center = [ -100, 40 ];
@@ -159,9 +163,9 @@ var basemapTitle = map.get("basemap.title");
 
 ---
 
-## Accessor properties
+# Accessor properties
 
-### Watch Property
+## Watch Property
 
 ```js
 var handle = map.watch('basemap.title',
@@ -172,7 +176,7 @@ function(newValue, oldValue, property, object) {
 
 ---
 
-## watchUtils
+# watchUtils
 
 Various utilities and convenience functions for watching Accessor properties.
 
@@ -196,17 +200,21 @@ function(newValue, oldValue, propertyName, target){
   - find()
   - reduce()
 
-examples: map.layers, popup.actions
+examples: map.layers, popup.actions, etc.
 
 ---
 
 # Collections: Event
 
-The change event fires each time an item is added, moved, or removed from the Collection.
+- change event
+- fires each time an item is
+  - added
+  - moved
+  - removed
 
 ---
 
-# Signifigant changes: Promises
+# Promises
 
 - handle asynchronous operations
 - future value returned
@@ -219,9 +227,9 @@ The change event fires each time an item is added, moved, or removed from the Co
 
 ---
 
-## promises
+# Promises: comparison
 
-### 3.x
+## 3.x
 ```javascript
 // map loaded
 if (map.loaded) {
@@ -232,7 +240,7 @@ if (map.loaded) {
 
 ```
 
-### 4.x
+## 4.x
 ```javascript
 view.then(init);
 
@@ -265,21 +273,19 @@ When a promise is rejected, it should be handled in an errback function.
 
 # Promises: Why?
 
-Q: why should you use a promise instead of an event listener?
-
-A: Access the result of an asynchronous process directly after it completes
-
-In comparison, if you initialize an event listener after an event has occurred then the listener will never fire.
+- Better than an event listener
+- Access the result of an asynchronous process directly after it completes
+- If you initialize an event listener after an event has occurred then the listener will never fire.
 
 ---
 
-# Promises: Dive deeper
+# Promises: Learn more
 
 [Working with promises](https://developers.arcgis.com/javascript/latest/guide/working-with-promises/index.html)
 
 ---
 
-### Loadable
+# Loadable
 
 - Loadable is an extension of promise
 - Starts async process once load() is called
@@ -352,23 +358,31 @@ lyr = new FeatureLayer({
 
 ---
 
-## Graphics Layer
+# Graphics Layer
+
+// todo
 
 ---
 
-## Group Layer
+# Group Layer
+
+// todo
 
 ---
 
 # Signifigant changes: Widgets
 
-esri dijits are now widgets
+- esri dijits are now widgets
+
+// todo
 
 ---
 
-##  Theming
+# Theming
 
-- Sass 
+- Sass
+
+// todo
 
 ---
 
@@ -488,10 +502,13 @@ view.goTo()
 ## deprecated stuff
 
 - no need for some things
-      - lang.hitch, use .bind(this)
-      - ie11+
-      - border containers, form widgets. Just use flexbox or native input elements
-      - dojo/base/array. Use native array functions.
+  - lang.hitch
+    - use `function(){}.bind(this)`
+  - ie11+
+  - border containers, form widgets
+    - Use css flexbox & native input elements
+  - dojo/base/array
+    - Use native array functions.
 
 ---
 
@@ -507,6 +524,8 @@ view.goTo()
 ## Cleaner stuff
 
 - 1 Popup: Popups/PopupTemplates
+
+// todo
 
 ---
 
