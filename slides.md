@@ -485,9 +485,10 @@ lyr = new FeatureLayer({
 ---
 
 <!-- Presenter: Kelly -->
-# Signifigant changes: Map
+# Significant changes: Map
 
 - Map.graphics is a collection, not a layer
+- Map can be displayed in 2d or 3d
 
 ---
 
@@ -495,7 +496,9 @@ lyr = new FeatureLayer({
 
 ---
 
-# Signifigant changes: View
+# Significant changes: View
+![View](./images/api-diagram-0b.png)
+
 
 ---
 
@@ -505,7 +508,9 @@ Map (data) and view (presentation) are broken apart.
 
 ## 3.x
 ```javascript
-var map = new Map( ... );
+var map = new Map( "mapDiv", {
+  basemap: "topo"
+});
 ```
 
 ## 4.x
@@ -543,6 +548,7 @@ require([
   });
 });
 ```
+[Demo](https://developers.arcgis.com/javascript/latest/sample-code/views-synchronize/index.html)
 
 ---
 
@@ -551,16 +557,24 @@ require([
 ---
 
 # Map/View separation: Navigation
+- Animate the view to a target which can include
+  - longitude, latitude pair
+  - Graphic or geometry
+  - Viewpoint
 
-view.goTo()
+  ```js
+  var pt = new Point({
+    latitude: 49,
+    longitude: -126  
+  });
+  view.goTo(pt);
+  ```
+[Demo](http://localhost/~kell3008/demos/UC2016/GettingStartedJSAPI/demos/Step5_LayerFilter/)
+
 
 ---
 
-# Map/View separation: Demo
-
----
-
-# Signifigant changes: Webmap + Webscene
+# Significant changes: Webmap + Webscene
 
 ---
 
