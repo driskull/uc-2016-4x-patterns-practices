@@ -20,7 +20,7 @@
 
 - 4x Goals
 - 3x &#8594; 4x Migration
-- 4x Signifigant changes
+- 4x Significant changes
 - 4x Tips & Best Practices
 - Resources
 
@@ -28,7 +28,7 @@
 
 # Goals: 4x JavaScript API
 
-- 2D/3D Visiualization
+- 2D/3D Visualization
   - web maps and scenes
 - Improved developer experience
   - consistency
@@ -73,14 +73,24 @@
 # 4.x Migration
 
 ![Migration](./images/migration.gif)
+- [Migration Guide ](https://developers.arcgis.com/javascript/latest/guide/migrating/index.html)
 
 ---
 
-# Matrix
+# Functionality Matrix
+[![Functionality Matrix](./images/matrix.png)](https://developers.arcgis.com/javascript/latest/guide/functionality-matrix/index.html#arcgisdynamicmapservicelayer)
 
 ---
 
 # CSS Theme
+- main.css - styles for everything API.
+```html
+<link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+```
+- view.css - basic map with default widgets
+```html
+<link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/view.css">
+```
 
 ---
 
@@ -94,7 +104,7 @@
 ---
 
 <!-- Presenter: Matt -->
-# 4.x Signifigant changes
+# 4.x Significant changes
 
 ![more](./images/more.gif)
 
@@ -171,7 +181,7 @@ var basemapTitle = map.get("basemap.title");
 ```js
  view.center = [ -100, 40 ];
  view.zoom = 6;
- map.basemap = 'oceans'; 
+ map.basemap = 'oceans';
 ```
 
 ---
@@ -402,7 +412,7 @@ lyr = new FeatureLayer({
     - independent
     - inherited
     - exclusive
-    
+
 [Group Layer Demo](http://jsapi.maps.arcgis.com/home/webscene/viewer.html?webscene=75a84d15aa254e47ab44298c2ff18f19)
 
 ---
