@@ -51,7 +51,7 @@
 - Map/View separation
 - Widget View/ViewModel separation
 - Accessor class
-- Autocasting
+- Widgets
 - Popups
 
 ---
