@@ -132,7 +132,7 @@
 
 ---
 
-# Autocasting
+# Accessor: Autocasting
 
 ```js
 var symbol = new SimpleMarkerSymbol({
@@ -160,9 +160,7 @@ var symbol = new SimpleMarkerSymbol({
 
 ---
 
-# Accessor properties
-
-## Get Property
+# Accessor: Getting properties
 
 ```js
 var basemap = map.basemap;
@@ -174,9 +172,7 @@ var basemapTitle = map.get("basemap.title");
 
 ---
 
-# Accessor properties
-
-## Set Property
+# Accessor: Setting properties
 
 ```js
  view.center = [ -100, 40 ];
@@ -186,9 +182,7 @@ var basemapTitle = map.get("basemap.title");
 
 ---
 
-# Accessor properties
-
-## Watch Property
+# Accessor: Watching properties
 
 ```js
 var handle = map.watch('basemap.title',
@@ -199,7 +193,7 @@ function(newValue, oldValue, property, object) {
 
 ---
 
-# Accessor Property Demo
+# Accessor: Property Demo
 
 [Demo](./demo/accessor-properties/)
 
@@ -403,17 +397,21 @@ lyr = new FeatureLayer({
 # Group Layer
 
 - Organize layers into common layer
-- Visibility manager
-  - listMode
-    - show
-    - hide
-    - hide-children
-  - visibilityMode
-    - independent
-    - inherited
-    - exclusive
+- listMode
+  - show
+  - hide
+  - hide-children
+- visibilityMode
+  - independent
+  - inherited
+  - exclusive
 
-[Group Layer Demo](http://jsapi.maps.arcgis.com/home/webscene/viewer.html?webscene=75a84d15aa254e47ab44298c2ff18f19)
+---
+
+## GroupLayer: Demos
+
+- [Webscene Demo](http://jsapi.maps.arcgis.com/home/webscene/viewer.html?webscene=75a84d15aa254e47ab44298c2ff18f19)
+- [GroupLayer Demo](./demo/grouplayer/index.html)
 
 ---
 
@@ -461,11 +459,15 @@ lyr = new FeatureLayer({
 
 // todo
 
+[theming Demo](./demo/theming/index.html)
+
 ---
 
 # Popup Widget
 
 // todo
+
+[Popup Demo](./demo/widgets/popup/index.html)
 
 ---
 
@@ -625,6 +627,9 @@ view.goTo()
 ---
 
 # Responsive tips
+
+- view size classes
+- view breakpoints
 
 // todo
 
