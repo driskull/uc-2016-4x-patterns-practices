@@ -248,6 +248,14 @@ examples: map.layers, popup.actions, etc.
 
 # Promises
 
+- Classes may be a Promise
+ - Load resources
+ - Asychronously initialized `Layer`, `WebMap`, `WebScene`, `View`
+
+---
+
+# Promises: What are they?
+
 - handle asynchronous operations
 - future value returned
 - 3 states
@@ -388,15 +396,6 @@ lyr = new FeatureLayer({
    source: graphics  //  an array of graphics
 });
 ```
-
----
-
-# Graphics Layer
-
-- Similar to 3x
-- Different method calls
-
-[Graphics Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html)
 
 ---
 
