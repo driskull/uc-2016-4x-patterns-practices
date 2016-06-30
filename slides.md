@@ -73,12 +73,15 @@
 # 4.x Migration
 
 ![Migration](./images/migration.gif)
-- [Migration Guide ](https://developers.arcgis.com/javascript/latest/guide/migrating/index.html)
+
+[Migration Guide ](https://developers.arcgis.com/javascript/latest/guide/migrating/index.html)
 
 ---
 
 # Functionality Matrix
 [![Functionality Matrix](./images/matrix.png)](https://developers.arcgis.com/javascript/latest/guide/functionality-matrix/index.html#arcgisdynamicmapservicelayer)
+
+More to come
 
 ---
 
@@ -99,10 +102,6 @@
 
 ---
 
-# More to come
-- Still more to do!
-
----
 
 <!-- Presenter: Matt -->
 # 4.x Significant changes
