@@ -46,6 +46,8 @@
 
 # Major Design Changes
 
+- AMD only
+- New Development patterns
 - Map/View separation
 - Widget View/ViewModel separation
 - Accessor class
@@ -99,6 +101,27 @@
 ---
 
 <!-- Presenter: Matt -->
+
+# Accessor
+
+- abstract class
+- facilitates the access to instance properties
+- mechanism to watch for property changes
+- inherited by many Esri classes
+- Provides a common developer experience
+
+> Inheritance: View &#8594; Accessor
+
+---
+
+# Accessor Benefits
+
+- "just need to know what properties for a class"
+- Leaner SDK: we doc only the properties, the rest is convention
+- AutoCasting
+
+---
+
 # Autocasting
 
 ```js
@@ -124,18 +147,6 @@ var symbol = new SimpleMarkerSymbol({
   })
 });
 ```
-
----
-
-# Accessor
-
-- abstract class
-- facilitates the access to instance properties
-- mechanism to watch for property changes
-- inherited by many Esri classes
-- Provides a common developer experience
-
-> Inheritance: View &#8594; Accessor
 
 ---
 
@@ -178,6 +189,12 @@ function(newValue, oldValue, property, object) {
 
 ---
 
+# Accessor Property Demo
+
+[Demo](./demo/accessor-properties/)
+
+---
+
 # watchUtils
 
 - utilities and convenience functions
@@ -196,6 +213,8 @@ function(newValue, oldValue, propertyName, target){
 
 # Collections
 
+- Like a "super" array.
+- Supports JS Array functions `forEach()` etc
 - generic object
 - stores an array of items of the same type
 - provides useful utility methods for working with items
@@ -411,7 +430,12 @@ lyr = new FeatureLayer({
 
 # Widgets: View Models
 
-// todo
+- New architecture
+- Logic of the widget separated from the representation
+- View implementations made in dijit/Accessor
+- Views' source code available in the SDK
+- View's can be rewritten in any framework
+- ViewModels can be combined to create Frankenwidgets
 
 ---
 
