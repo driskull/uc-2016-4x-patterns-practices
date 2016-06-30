@@ -449,6 +449,8 @@ lyr = new FeatureLayer({
   - [NavigationToggle](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle.html)
 - Redesigned Popups
 
+[Demo](http://localhost/git/4.0master/test-apps/widgets/ui-corners/ui-corners.html)
+
 ---
 
 # Widgets: View Models
@@ -561,10 +563,10 @@ var template = new PopupTemplate({
 
 # Widgets: future
 
+- Still many widgets to port!
 - Adding functionality
 - Improving UX/UI
 - Improving Accessibility
-- Still many widgets to port!
 
 ---
 
@@ -734,7 +736,7 @@ require([
 <!-- Presenter: Kelly + Matt -->
 # Additional Resources
 
-- Geonet/support/rene/github/sass (Kelly)
+<!-- - Geonet/support/rene/github/sass (Kelly) -->
 - [Documentation - 4.0 beta](https://developers.arcgis.com/javascript/beta/)
 - [4x What's new](https://developers.arcgis.com/javascript/latest/guide/whats-new/index.html)
 - [4x FAQ](https://developers.arcgis.com/javascript/latest/guide/faq/index.html)
