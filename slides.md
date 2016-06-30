@@ -603,10 +603,6 @@ view.goTo()
 
 ---
 
-# Widget best practices
-
----
-
 # Deprecated things
 
 - Modernize your code
@@ -628,15 +624,6 @@ view.goTo()
 - `simplemarkersymbol` &#8594; `simple-marker-symbol`
 - `picturemarkersymbol` &#8594; `picture-marker-symbol`
 - `simplelinesymbo`l &#8594; `simple-line-symbol`
-
----
-
-# Responsive tips
-
-- view size classes
-- view breakpoints
-
-// todo
 
 ---
 
