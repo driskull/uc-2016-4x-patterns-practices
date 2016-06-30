@@ -5,7 +5,7 @@
 
 ![qr](./images/qr.jpg)
 
-## bit.ly/4xpatterns
+## Short URL: bit.ly/4xpatterns
 
 ---
 
@@ -502,6 +502,20 @@ lyr = new FeatureLayer({
 - Can have an icon and a text
 - Listen to `action-select` event to call your own function
 - By default, just "zoom-to" is in `actions`
+
+---
+
+# Widgets: Current
+
+- Out of the box widgets at 4.0:
+ - Zoom
+ - Attribution
+ - Compass
+ - Home
+ - Locate
+ - Search
+ - Legend
+ - Popup
 
 ---
 
