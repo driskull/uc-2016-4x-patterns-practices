@@ -39,7 +39,7 @@
   - Library/Framework agnostic
   - User experience
 - Enhance documentation
-- Improve integration with Portal
+- Improve integration with `Portal`
 - Use cutting edge browser features
 
 ---
@@ -50,7 +50,7 @@
 - New Development patterns
 - Map/View separation
 - Widget View/ViewModel separation
-- Accessor class
+- `Accessor` class
 - Widgets
 - Popups
 
@@ -62,10 +62,10 @@
 - Firefox
 - Edge
 - Safari 7.1+
-- OS Safari
+- iOS Safari
 - IE11*
 
-*The WebGL implementation of Internet Explorer is not optimized for memory-intensive applications and it might not work reliably when opening certain scenes.
+*IE11 WebGL is not optimized. May not perform well when opening certain scenes.
 
 ---
 
@@ -122,12 +122,16 @@
 
 > Inheritance: View &#8594; Accessor
 
+[SDK example](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html)
+
 ---
 
 # Accessor Benefits
 
-- "just need to know what properties for a class"
+- No need for events
+  - Stateful properties to watch
 - Leaner SDK: we doc only the properties, the rest is convention
+- Common foundation for our API
 - AutoCasting
 
 ---
@@ -170,6 +174,12 @@ var basemap = map.basemap;
 var basemapTitle = map.get("basemap.title");
 ```
 
+## No need for...
+
+```js
+var basemapTitle = map.basemap && map.basemap.title;
+```
+
 ---
 
 # Accessor: Setting properties
@@ -202,7 +212,7 @@ function(newValue, oldValue, property, object) {
 # watchUtils
 
 - utilities and convenience functions
-- for watching Accessor properties
+- for watching `Accessor` properties
 
 ```js
 watchUtils.init(accessorClass.property,
@@ -219,7 +229,6 @@ function(newValue, oldValue, propertyName, target){
 
 - Like a "super" array.
 - Supports JS Array functions `forEach()` etc
-- generic object
 - stores an array of items of the same type
 - provides useful utility methods for working with items
   - filter()
@@ -247,7 +256,7 @@ examples: map.layers, popup.actions, etc.
 - 3 states
   - pending
   - resolved
-  - rejected.
+  - rejected
 - Methods
   - then
 
@@ -256,6 +265,7 @@ examples: map.layers, popup.actions, etc.
 # Promises: comparison
 
 ## 3.x
+
 ```javascript
 // map loaded
 if (map.loaded) {
@@ -269,14 +279,13 @@ if (map.loaded) {
 ## 4.x
 ```javascript
 view.then(init);
-
 ```
 
 ---
 
 # Promises: then()
 
-- commonly used with the .then() method
+- commonly used with the `.then()` method
  - allows you to define the callback and errback functions
 
 ```js
@@ -301,7 +310,7 @@ When a promise is rejected, it should be handled in an errback function.
 
 - Better than an event listener
 - Access the result of an asynchronous process directly after it completes
-- If you initialize an event listener after an event has occurred then the listener will never fire.
+- If you initialize an event listener after an event has occurred then the listener will never fire
 
 ---
 
@@ -313,7 +322,7 @@ When a promise is rejected, it should be handled in an errback function.
 
 # Loadable
 
-- Loadable is an extension of promise
+- An extension of promise
 - Starts async process once load() is called
 - Used on layers
   - Layers shouldn't start async process until needed
@@ -322,7 +331,7 @@ When a promise is rejected, it should be handled in an errback function.
 
 # Loadable: Layer
 
-Example: layer.load() once layer is added to a view. Otherwise, don't start loading.
+Example: `layer.load()` once layer is added to a view. Otherwise, don't start loading
 
 [FeatureLayer.load()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#load)
 
@@ -330,9 +339,12 @@ Example: layer.load() once layer is added to a view. Otherwise, don't start load
 
 # LayerView
 
-- Represents the view for a single layer
-  - after it has been added to either a MapView or a SceneView.
-- Views have layerViews collection
+- Gives info about a layer's rendering on a view
+  - features
+  - after it has been added to either a `MapView` or a `SceneView`.
+- Can override properties of the layer
+  - visibility, etc.
+- Views have a `Collection of LayerViews`
 
 ---
 
@@ -343,8 +355,8 @@ Example: layer.load() once layer is added to a view. Otherwise, don't start load
   - feature service
   - AGOL/Portal items
   - client side graphics
-- Supports Map/Scene view
-- Client definitionExpression support
+- Supports Map/Scene views
+- Client `definitionExpression` support. [SDK](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#definitionExpression)
 - Not currently supported
   - adding geometries
   - deleting geometries
@@ -385,26 +397,19 @@ lyr = new FeatureLayer({
 
 ---
 
-# Graphics Layer
-
-- Similar to 3x
-- Different method calls
-
-[Graphics Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html)
-
----
-
 # Group Layer
 
 - Organize layers into common layer
-- listMode
+- listMode - how the layer should display in ToC
   - show
   - hide
   - hide-children
-- visibilityMode
+- visibilityMode - Visibility of the children layers
   - independent
   - inherited
   - exclusive
+  
+  [SDK](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html)
 
 ---
 
@@ -419,14 +424,14 @@ lyr = new FeatureLayer({
 
 - Esri Dijits are now called Widgets
 - Simplified getting, setting, and watching widgets to be more simplistic and consistent
-- Widgets extend a form of Accessor + _WidgetBase
+- Widgets extend a form of `Accessor` + `_WidgetBase`
 
 ---
 
 # Widgets: Enhancements
 
-- Combined Attribution and logo widgets into new Attribution widget
-- Divided the Locate widget into updated Locate widget and new Track widget
+- Combined Attribution and logo widgets into new [Attribution widget](https://developers.arcgis.com/javascript/latest/sample-code/webmap-basic/live/index.html)
+- Divided the Locate widget into updated Locate widget and new [Track widget](https://developers.arcgis.com/javascript/latest/sample-code/widgets-track/index.html)
 - Updated design to match Esri "Calcite" styling
   - More modern looking
 - Added 3D specific widgets
@@ -440,7 +445,7 @@ lyr = new FeatureLayer({
 
 - New architecture
 - Logic of the widget separated from the representation
-- View implementations made in dijit/Accessor
+- View implementations made in `Accessor`
 - Views' source code available in the SDK
 - View's can be rewritten in any framework
 - ViewModels can be combined to create Frankenwidgets
@@ -449,25 +454,25 @@ lyr = new FeatureLayer({
 
 # Widgets: SASS
 
-- Widgets are using SASS
+- Widgets in API are now styled using [SASS](http://sass-lang.com/)
+- CSS Preprocessor
+- Variables, Mixins
+- Allow for easier customization
 
 ---
 
 # Widgets: Theming
 
-- Sass demo
-
-// todo
-
-[theming Demo](./demo/theming/index.html)
+- [theming with CSS](./demo/theming/index.html)
+- [theming with SASS](http://localhost/git/4.0master/test-apps/widgets/ui-corners/ui-corners.html)
 
 ---
 
 # Popup Widget
 
-// todo
-
-[Popup Demo](./demo/widgets/popup/index.html)
+- [Popup Demo](./demo/widgets/popup/custom-actions.html)
+- [Popup Dock Positions](https://developers.arcgis.com/javascript/latest/sample-code/popup-docking-position/index.html)
+- [Popup Pagination + Menu](http://localhost/git/4.0master/test-apps/widgets/popup/2d-async-features.html)
 
 ---
 
