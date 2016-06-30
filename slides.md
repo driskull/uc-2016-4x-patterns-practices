@@ -478,7 +478,30 @@ lyr = new FeatureLayer({
 
 # PopupTemplate
 
-// todo
+- [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) redesigned
+- Can have a title and a content
+- custom action buttons
+
+---
+
+# PopupTemplate: Content
+
+- Content can be a string or an array of objects
+- Content array has different types
+  - media
+  - text
+  - attachments
+  - fields
+
+---
+
+# PopupTemplate: Actions
+
+- Added support for `actions`
+- `actions` are custom buttons to do something app specific
+- Can have an icon and a text
+- Listen to `action-select` event to call your own function
+- By default, just "zoom-to" is in `actions`
 
 ---
 
