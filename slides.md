@@ -95,6 +95,7 @@
 ---
 
 # New SDK
+[![SDK](./images/sdk_tour.png)](https://developers.arcgis.com/javascript/)
 
 ---
 
