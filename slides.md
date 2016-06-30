@@ -384,7 +384,7 @@ lyr = new FeatureLayer({
     - inherited
     - exclusive
     
-// todo: find scene with group layer to demo
+[Group Layer Demo](http://jsapi.maps.arcgis.com/home/webscene/viewer.html?webscene=75a84d15aa254e47ab44298c2ff18f19)
 
 ---
 
