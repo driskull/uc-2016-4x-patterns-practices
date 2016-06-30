@@ -405,7 +405,7 @@ lyr = new FeatureLayer({
 
 ---
 
-# Group Layer
+# GroupLayer
 
 - Organize layers into common layer
 - listMode - how the layer should display in ToC
@@ -433,6 +433,8 @@ lyr = new FeatureLayer({
 - Esri Dijits are now called Widgets
 - Simplified getting, setting, and watching widgets to be more simplistic and consistent
 - Widgets extend a form of `Accessor` + `_WidgetBase`
+
+![Widgets](./images/widgets.png)
 
 ---
 
@@ -467,6 +469,8 @@ lyr = new FeatureLayer({
 - Variables, Mixins
 - Allow for easier customization
 
+![SASS](./images/sass.png)
+
 ---
 
 # Widgets: Theming
@@ -482,6 +486,8 @@ lyr = new FeatureLayer({
 - [Popup Dock Positions](https://developers.arcgis.com/javascript/latest/sample-code/popup-docking-position/index.html)
 - [Popup Pagination + Menu](http://localhost/git/4.0master/test-apps/widgets/popup/2d-async-features.html)
 
+![popup](./images/popup.png)
+
 ---
 
 # PopupTemplate
@@ -489,6 +495,16 @@ lyr = new FeatureLayer({
 - [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) redesigned
 - Can have a title and a content
 - custom action buttons
+
+```js
+var template = new PopupTemplate({
+  title: "My Title",
+  content: "My Content",
+  fieldInfos: [...],
+  actions: Collection([...]),
+  overwriteActions: false
+});
+```
 
 ---
 
@@ -500,15 +516,31 @@ lyr = new FeatureLayer({
   - text
   - attachments
   - fields
+  
+```js
+var template = new PopupTemplate({
+  content: [{
+    type: "text",
+    text: "There are {Point_Count} trees"
+  },
+  {
+    type: "media",
+    mediaInfos: [...]
+  },
+  {
+    type: "attachments"
+  }]
+});
+```
 
 ---
 
 # PopupTemplate: Actions
 
-- Added support for `actions`
+- Added support for [`actions`](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html#actions)
 - `actions` are custom buttons to do something app specific
 - Can have an icon and a text
-- Listen to `action-select` event to call your own function
+- Listen to `trigger-action` event to call your own function
 - By default, just "zoom-to" is in `actions`
 
 ---
