@@ -416,7 +416,7 @@ lyr = new FeatureLayer({
   - independent
   - inherited
   - exclusive
-  
+
   [SDK](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html)
 
 ---
@@ -518,7 +518,7 @@ var template = new PopupTemplate({
   - text
   - attachments
   - fields
-  
+
 ```js
 var template = new PopupTemplate({
   content: [{
@@ -579,7 +579,14 @@ var template = new PopupTemplate({
 ---
 
 # Basemaps
-
+- Full fledged class  `esri/Basemap`
+- Basemap
+  - `baseLayers`
+  - `referenceLayers`
+- can be set with
+  - [string for esri's basemap](demo/basemap/2d.html)
+  - Custom [Basemap instance](demo/basemap/custom-arctic.html)
+  - [Toggle](demo/map/togglebasemaps.html) Basemaps
 ---
 
 # Significant changes: View
@@ -639,6 +646,25 @@ require([
 ---
 
 # Map/View separation: Camera
+- Set the view to a target which can include
+  - longitude, latitude pair
+  - Graphic or geometry
+  - Viewpoint
+  - Camera
+
+  ```js
+  var cam = new Camera({
+    position: new Point({
+      x: -100.23, // lon
+      y: 65,      // lat
+      z: 10000,   // elevation in meters
+    }),
+    heading: 180, // facing due south
+    tilt: 45      // bird's eye view
+  });
+
+  view.goTo(cam);
+  ```
 
 ---
 
@@ -655,30 +681,126 @@ require([
   });
   view.goTo(pt);
   ```
-[Demo](http://localhost/~kell3008/demos/UC2016/GettingStartedJSAPI/demos/Step5_LayerFilter/)
-
+[Demo](demo/map/goto/index.html)
 
 ---
 
 # Significant changes: Webmap + Webscene
+- Full Web Scene support
+- Partial Web Map support
+  - Non supported layers won't show (UnsupportedLayer)
+  - Full support coming late 2016
 
 ---
 
 # Webmap
+
+```js
+var webmap = new WebMap({
+  portalItem: {
+    id: 'e691172598f04ea8881cd2a4adaa45ba'
+  }
+});
+```
+[demo](https://developers.arcgis.com/javascript/latest/sample-code/webmap-basic/live/index.html)
+
 
 ---
 
 <!-- Briefly -->
 # WebScene
 
+```js
+var webscene = new WebScene({
+  portalItem: {
+    id: '19dcff93eeb64f208d09d328656dd492'
+  }
+});
+```
+
 ---
 
-# Signifigant changes: Portal
+# WebScene - Slides
+- Created with the ArcGIS Online Scene Viewer
+- Store layers visibility, camera, environment
+
+```js
+var slides = scene.presentation.slides;
+
+// create a clickable thumbnails
+slides.forEach(function(slide) {
+  var thumb = new Slide({
+    slide: slide
+  });
+  thumb.on('click', function() {
+    // apply the slide on the view
+    slide.applyTo(view);
+  });
+  slidesDiv.appendChild(thumb.domNode);
+});
+
+```
+
+[demo](demo/platform/webscene.html)
 
 ---
 
 <!-- Briefly -->
 # Portal changes
+
+- [redesigned API](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html)
+- Load layers, web map, web scenes
+- query items, users, groups
+
+---
+
+```js
+var portal = new Portal();
+
+// Setting authMode to immediate signs the user in once loaded
+portal.authMode = 'immediate';
+
+// Once loaded, user is signed in
+portal.load()
+  .then(function() {
+    // Create query parameters for the portal search
+    var queryParams = new PortalQueryParams({
+      query: 'owner:' + portal.user.username,
+      sortField: 'numViews',
+      sortOrder: 'desc',
+      num: 20
+    });
+
+    // Query the items based on the queryParams created from portal above
+    portal.queryItems(queryParams).then(createGallery);
+  });
+```
+
+[demo](https://developers.arcgis.com/javascript/latest/sample-code/identity-oauth-basic/live/index.html)
+
+
+---
+
+# Layer from Portal Item
+```js
+var promise = Layer.fromPortalItem({
+  portalItem: {
+    id: '8444e275037549c1acab02d2626daaee',
+    portal: {
+      url: 'https://myorg.maps.argis.com'
+    }
+  }
+})
+.then(function(layer) {
+  // Adds the layer to the map once it loads
+  map.add(layer);
+})
+.otherwise(function(error) {
+  //handle the error
+});
+```
+
+[demo](demo/platform/webmap.html)
 
 ---
 
@@ -722,14 +844,51 @@ require([
 
 <!-- Presenter: Kelly -->
 # Responsive General changes
+Easier to build responsive apps
+``` js
+view.watch("widthBreakpoint", function(newVal){
+  if (newVal === "xsmall"){
+    // clear the view's default UI components if
+    // app is used on a mobile device
+    view.ui.components = [];  
+  }
+});
+```
+[Width Breakpoints](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#widthBreakpoint)
+
+[Demo](https://developers.arcgis.com/javascript/latest/sample-code/frameworks-bootstrap/index.html)
+
+---
 
 ---
 
 # View padding
+- Offset view
+  - center and extent work off subset
+[![View Padding](./images/viewpadding.png)](https://developers.arcgis.com/javascript/latest/sample-code/view-padding/index.html)
+
 
 ---
 
 # UI Components
+![UI Components](./images/uicomponents.png)
+
+---
+
+# Add Components
+``` js
+view.ui.add(search, "top-right");
+view.ui.add(logo, "bottom-right");
+```
+
+---
+
+# Move Components
+``` js
+view.ui.move(logo, "bottom-left");
+view.ui.remove(search);
+```
+[Demo](./demo/view/legend/index.html)
 
 ---
 
@@ -740,6 +899,27 @@ require([
 - [Documentation - 4.0 beta](https://developers.arcgis.com/javascript/beta/)
 - [4x What's new](https://developers.arcgis.com/javascript/latest/guide/whats-new/index.html)
 - [4x FAQ](https://developers.arcgis.com/javascript/latest/guide/faq/index.html)
+
+---
+# JSAPI Resources
+- TypeScript definition files
+- Bower
+- JSHint
+
+[esriurl.com/resources](http://esriurl.com/resources)
+
+---
+
+# Geonet
+[![Geonet](./images/geonet.png)](https://geonet.esri.com/community/developers/web-developers/arcgis-api-for-javascript/tags#/?recursive=false&tags=4.0)
+
+
+---
+
+# Blogs
+- [ArcGIS Blog](https://blogs.esri.com/esri/arcgis/tag/javascript/)
+- [Odoe.net](http://odoe.net/blog/)
+
 
 ---
 
